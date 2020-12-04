@@ -1,0 +1,25 @@
+@extends('layout.layout')
+@section('content')
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title">create post</h3>
+        </div>
+        <form method="post" enctype="multipart/form-data" action="{{route('posts.save')}}">
+            <div class="box-body">
+            <div class="form-group">
+                <label for="exampleInputEmail">post title</label>
+                    <input type="name" class="form-control" placeholder="Name" name="title">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail">post text</label>
+                <input type="name" class="form-control" placeholder="Name" name="post_text">
+            </div>
+        </div>
+            <input type="hidden" name="_token" id='csrf_token' value="{{csrf_token()}}">
+            <div class="box-footer">
+                <button type="submit" class="btn btn-primary">save</button>
+            </div>
+        </form>
+    </div>
+
+@endsection
