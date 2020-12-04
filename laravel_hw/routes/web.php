@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+
 });
 //Route::get('/about_us', [\App\Http\Controllers\AboutUsController::class, 'index']);
 Route::get('posts/create', [\App\Http\Controllers\PostController::class, 'create'])->name('posts.create');
